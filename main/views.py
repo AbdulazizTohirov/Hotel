@@ -45,8 +45,9 @@ def AboutView(request):
 def StaffView(request):
     return render (request, 'staff.html')
 
-def HomeView(request):
-    return render (request, 'index.html')
+
+def Contact2View(request):
+    return render (request, 'contact_2.html')
 
 
 

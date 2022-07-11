@@ -9,5 +9,5 @@ urlpatterns = [
     path('blog/', BlogView, name='blog_url'),
     path('about/', AboutView, name='about_url'),
     path('staff/', StaffView, name='staff_url'),
-    path('Home/', HomeView, name='home_url'),
+    path('contact2/', Contact2View, name='contact2_url'),
 ]

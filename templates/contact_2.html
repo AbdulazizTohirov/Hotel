@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Thank you for your inquiry and we will contact you shortly</h1>
+        <a href=" {% url 'index_url' %} ">back</a>
+    </div>
+    <style>
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image:url("https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div{
+            text-align: center;
+            height: 200px;
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: red;
+            background:black;
+            box-shadow: 10px 10px 10px black;
+            padding: 15px 20px ;
+            transition: all ease 0,5s;
+            font-size: 18px;
+            letter-spacing: 2px;
+            border-radius: 8px;
+            border: 2px solid red;
+        }
+        a:active{
+            padding: 10px 15px;
+        }
+        h1{
+            color: white;
+
+        }
+    </style>
+</body>
+</html>
