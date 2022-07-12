@@ -22,6 +22,22 @@
     .img-fluid{
       height: 300px;
       }
+      .row{
+        justify-content: space-around;
+      }
+      .col-md-4{
+        display: flex ;
+        justify-content:center;
+      }
+      .mb-3{
+      text-align: center;
+      }
+      .img-fluid{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%  ;
+        justify-content: space-between;  
+      }
     </style>
   </head>
   <body>
@@ -199,43 +215,22 @@
         </div>
         <div class="row ">
           <div class="col-md-4">
+            {% for staff in staffs %}
             <div class="post-entry">
-              <img src="https://qtxasset.com/cdn-cgi/image/w=384,h=216,f=auto,fit=crop,g=0.5x0.5/https://qtxasset.com/quartz/qcloud1/media/image/hotelmanagement/1616683694/Hotel-Reception-Getty-valentinrussanov.jpg?VersionId=1FcxToMiGDm9sdKC_DzDnw.x2cvybU9Q" alt="Image placeholder" class="img-fluid">
+              <img src= " {{staff.img.url}} " alt="Image placeholder" class="img-fluid">
               <div class="body-text">
-                <div class="category">Reseption</div>
-                <h3 class="mb-3"><a href=" {% url 'staff_url' %} ">Reseption</a></h3>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum deserunt illo quis similique dolore voluptatem culpa voluptas rerum, dolor totam.</p>
-                <p><a href="{% url 'staff_url' %}" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
+                <div class="category">{{ staff.status }}</div>
+                <h3 class="mb-3"><a href=" {% url 'staff_url' %} ">{{ staff }}</a></h3>
+                <p class="mb-4"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, laborum dolores?  </p>
               </div>
             </div>
+            {% endfor %}
           </div>
-          <div class="col-md-4">
-            <div class="post-entry">
-              <img src="https://www.hotelschool.co.za/wp-content/uploads/2013/05/ID-100105558.jpg" alt="Image placeholder" class="img-fluid">
-              <div class="body-text">
-                <div class="category"> Porter</div>
-                <h3 class="mb-3"><a href="{% url 'staff_url' %}">Porter</a></h3>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum deserunt illo quis similique dolore voluptatem culpa voluptas rerum, dolor totam.</p>
-                <p><a href="{% url 'staff_url' %}" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="post-entry">
-              <img src="https://www.ladbible.com/cdn-cgi/image/width=720,quality=70,format=jpeg,fit=pad,dpr=1/https%3A%2F%2Fs3-images.ladbible.com%2Fs3%2Fcontent%2F689ca87860b71c71f535c4eda2515880.png" alt="Image placeholder" class="img-fluid">
-              <div class="body-text">
-                <div class="category">Waiter</div>
-                <h3 class="mb-3"><a href="{% url 'staff_url' %}">Waiter</a></h3>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum deserunt illo quis similique dolore voluptatem culpa voluptas rerum, dolor totam.</p>
-                <p><a href="{% url 'staff_url' %}" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- END section -->
-   {% static '
     <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">

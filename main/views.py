@@ -4,9 +4,10 @@ from main.models import *
 
 def index_view(request):
     rooms = RoomsModel.objects.all()
-    blogs = WorkersModel.objects.all()
+    staffs = WorkersModel.objects.all().order_by('-id')[:4]
     context ={
-        'blogs':blogs
+        'staffs':staffs,
+        'rooms':rooms,
     }
     return render(request, 'index.html',context)
 
@@ -23,7 +24,7 @@ def CreateContact(request):
                 email = email,
                 message = message,
             )
-            return redirect('index_url')
+            return redirect('contact2_url')
         except:
             return redirect('index_url')
 

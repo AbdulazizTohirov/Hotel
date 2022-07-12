@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.db import models
 
 class RoomsModel(models.Model):
@@ -7,12 +8,12 @@ class RoomsModel(models.Model):
         return self.img
 
 class WorkersModel(models.Model):
+    name = models.CharField(max_length=255)
     status = models.CharField(max_length=255)
-    text = models.TextField()
-    img = models.ImageField()
+    img = models.ImageField(upload_to='staff')
 
     def __str__(self):
-        return self.status
+        return self.name
 
 class ContactModel(models.Model):
     name = models.CharField(max_length=255)
