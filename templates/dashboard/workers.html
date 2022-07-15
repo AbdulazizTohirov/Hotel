@@ -84,7 +84,7 @@
                                 <a class="nav-link active" href="{% url 'workers_url' %} "  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i> Workers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{% url 'users_url' %} "  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Users</a>
+                                <a class="nav-link " href=" "  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Users</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link " href="{% url 'requests_url' %} "  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Requests</a>
@@ -151,11 +151,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Please enter Teachers imformations to input</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Please enter Workers imformations to input</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form action="{% url 'teacher_create_url' %}" method="post" enctype="multipart/form-data">
+            <form action="{% url 'worker_create_url' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <label for="first_name" class=" col-form-label">Name</label>
                 <input class="form-control" type="text" placeholder="Enter the name" aria-label="default input example" id="name" name="name">

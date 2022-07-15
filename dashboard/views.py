@@ -53,3 +53,10 @@ def users(request):
         'users': users
     }
     return render(request, 'dashboard/teachers.html', context)
+
+def rooms(request):
+    rooms = RoomsModel.objects.all()
+    context = {
+        'rooms': rooms
+    }
+    return render(request, 'rooms.html', context)
