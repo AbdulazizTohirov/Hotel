@@ -31,16 +31,22 @@ def CreateContact(request):
 def CreateBook(request):
     if request.method == 'POST':
         try:
-            first_date = request.POST['name']
-            last_date = request.POST['phone_number']
+            print(True)
+            first_date = request.POST['first_date']
+            last_date = request.POST['last_date']
+            guest_choces = request.POST['guests']
+            room_choices = request.POST['rooms']
             email = request.POST['email']
             message = request.POST['message']
-            ContactModel.objects.create(
+            BookModel.objects.create(
                 first_date = first_date,
                 last_date = last_date,
+                guest_choces = guest_choces,
+                room_choices = room_choices, 
                 email = email,
                 message = message,
             )
+            print(False)
             return redirect('index_url')
         except:
             return redirect('index_url')

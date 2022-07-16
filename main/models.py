@@ -64,6 +64,23 @@ class BookModel(models.Model):
         choices=Rooms_Choices,
         default=Room_1,
     )
+    guest_1 = 'guest_1'
+    guest_2 = 'guest_2'
+    guest_3 = 'guest_3'
+    guest_4 = 'guest_4'
+    guest_5 = 'guest_5'
+    Guest_Choices = [
+        (guest_1, 'guest_1'),
+        (guest_2, 'guest_2'),
+        (guest_3, 'guest_3'),
+        (guest_4, 'guest_4'),
+        (guest_5, 'guest_5'),
+    ]
+    guest_choices = models.CharField(
+        max_length=255,
+        choices=Guest_Choices,
+        default=guest_1,
+    )
     email = models.EmailField()
     message = models.TextField()
 
